@@ -58,6 +58,11 @@ app.get('/help', (req,res) => {
   res.render('about.hbs',{pageTitle:'Help Page'});
 });
 
+app.get('/project', (req,res) => {
+//  res.sendFile(path.join(__dirname+'/public/help.html'));
+  res.render('project.hbs',{pageTitle:'Project Page'});
+});
+
 app.get('/bad', (req,res) => {
   res.send({
     errorMessage: 'Unable to process the request'
